@@ -4,7 +4,7 @@ import { Canvas2D } from '../canvas'
 import { Control } from './control'
 import { DrawableControl } from './interfaces/drawable'
 
-// TODO: Don't implement as background control. Move to camera
+// TODO: 不要将其实现为后台控件。移动到摄像头
 export class Background extends Control implements DrawableControl {
   private static readonly BACKGROUND_SVG =
     'data:image/svg+xml,' +

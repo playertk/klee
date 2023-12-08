@@ -35,7 +35,7 @@ export class Scene {
     this._pins = new Array<PinControl>()
   }
 
-  // TODO: Move this out
+  // TODO:把这个搬出去
   get camera() {
     return this._camera
   }
@@ -52,6 +52,7 @@ export class Scene {
     return this._interactables || []
   }
 
+  // 收集所有可交互的控件
   collectInteractables() {
     let interactables: Array<InteractableUserControl> = []
     this._controls.forEach((control) => {
@@ -67,6 +68,7 @@ export class Scene {
     this._interactables = interactables
   }
 
+  // 在容器内递归查找可交互控件
   private findInteractablesIn(interactables: Array<InteractableUserControl>, container: Container) {
     for (let child of container.getChildren()) {
       if (child instanceof InteractableUserControl) {
@@ -79,6 +81,7 @@ export class Scene {
     }
   }
 
+  // 更新布局
   updateLayout() {
     this._controls.forEach((control) => {
       if (control instanceof UserControl) {
@@ -87,6 +90,7 @@ export class Scene {
     })
   }
 
+  // 刷新场景
   refresh() {
     this._canvas.clear()
 
@@ -102,27 +106,30 @@ export class Scene {
     })
   }
 
+  // 卸载场景
   unload() {
     this._pins = new Array<PinControl>()
     this._nodes = new Array<NodeControl>()
     this._controls = new Array<Control>()
   }
 
+  // 加载场景
   load(dataNodes: NodeControl[]) {
     this.createBackground()
     this.createControlNodes(dataNodes)
-    // Creates connection lines between pins
-
+    // 创建连接线
     this.createConnectionLines()
 
     this.initializeControls()
   }
 
+  // 创建背景控件
   private createBackground() {
     let background = new Background(this.camera)
     this._controls.push(background)
   }
 
+  // 创建控制节点
   private createControlNodes(controls: NodeControl[]) {
     for (const control of controls) {
       this._nodes.push(control)
@@ -132,6 +139,7 @@ export class Scene {
     }
   }
 
+  // 收集节点的引脚
   private collectPins(control: Control) {
     if (control instanceof Container) {
       for (let child of control.getChildren()) {
@@ -145,6 +153,7 @@ export class Scene {
     }
   }
 
+  // 创建连接线
   private createConnectionLines() {
     const connectedPins: string[] = []
     const pins = this._pins
@@ -177,7 +186,7 @@ export class Scene {
       if (wasConnected) pins.splice(i, 1)
     }
 
-    // Go through pins which are connected to a missing node
+    // 处理连接到缺失节点的引脚
     for (let i = pins.length - 1; i >= 0; --i) {
       let pin = pins[i]
 
@@ -191,12 +200,14 @@ export class Scene {
     }
   }
 
+  // 初始化控件
   private initializeControls() {
     for (let control of this._controls) {
       this.initializeControl(control)
     }
   }
 
+  // 初始化单个控件
   private initializeControl(control: Control) {
     control.initControl(this.app)
 
@@ -207,6 +218,7 @@ export class Scene {
     }
   }
 
+  // 计算质心
   calculateCentroid(): Vector2 {
     let centroid = new Vector2(0, 0)
 
@@ -222,6 +234,7 @@ export class Scene {
     return new Vector2(centroid.x / this.nodes.length, centroid.y / this.nodes.length)
   }
 
+  // 计算中心点
   calculateCenterPoint() {
     if (this.nodes.length == 0) return new Vector2(0, 0)
 
