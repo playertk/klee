@@ -1,37 +1,39 @@
 {
-    "name": "klee",
-    "version": "1.0.0",
-    "description": "Unreal Engine Blueprint Visualizer for the Web",
-    "private": "true",
-    "scripts": {
-        "dev": "webpack serve --config webpack.dev.js",
-        "docs": "webpack serve --config webpack.docs.js",
-        "build": "webpack --config webpack.prod.js"
-    },
-    "files": [
-        "/dist"
-    ],
-    "keywords": [
-        "Unreal",
-        "Unreal Engine",
-        "Blueprint",
-        "NodeGraph"
-    ],
-    "author": {
-        "email": "contact@tinu.io",
-        "name": "Martin Hodler",
-        "url": "https://tinu.io"
-    },
-    "contributors": [
-        "Pascal Aregger <pascal.aregger97@gmail.com>"
-    ],
-    "devDependencies": {
-        "ifdef-loader": "^2.3.2",
-        "ts-loader": "^9.4.1",
-        "typescript": "^4.9.3",
-        "webpack": "^5.75.0",
-        "webpack-cli": "^5.0.0",
-        "webpack-dev-server": "^4.11.1",
-        "webpack-merge": "^5.8.0"
-    }
+  "name": "klee",
+  "version": "1.0.0",
+  "description": "Unreal Engine Blueprint Visualizer for the Web",
+  "private": "true",
+  "scripts": {
+    "dev": "webpack serve --config webpack.dev.js",
+    "docs": "webpack serve --config webpack.docs.js",
+    "build": "webpack --config webpack.prod.js",
+    "linter": "prettier --write \"src/**/*.ts"
+  },
+  "files": [
+    "/dist"
+  ],
+  "keywords": [
+    "Unreal",
+    "Unreal Engine",
+    "Blueprint",
+    "NodeGraph"
+  ],
+  "author": {
+    "email": "contact@tinu.io",
+    "name": "Martin Hodler",
+    "url": "https://tinu.io"
+  },
+  "contributors": [
+    "Pascal Aregger <pascal.aregger97@gmail.com>"
+  ],
+  "devDependencies": {
+    "ifdef-loader": "^2.3.2",
+    "prettier": "3.1.0",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.9.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  }
 }

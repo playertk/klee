@@ -1,5 +1,4 @@
-
 export class PinLink {
-    nodeName: string;
-    pinID: string;
+  nodeName: string
+  pinID: string
 }

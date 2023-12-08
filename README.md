@@ -1,23 +1,26 @@
 # Klee
-A standalone Unreal Engine Blueprint visualizer for the web.
 
-## Build minified JS
-To build a minified JavaScript file of klee you have to install the development dependencies:
+一个独立的虚幻引擎蓝图可视化网站。
+
+## 构建精简的JS
+
+要构建Klee的精简的JavaScript文件，您必须安装开发依赖项：
+
 ```bash
 npm install
 ```
 
-As soon as the dependencies are installed you can run the following command to build a minified JavaScript file.
+一旦安装了依赖项，您就可以运行以下命令来构建一个精简的JavaScript文件。
+
 ```bash
 npm run build
 ```
 
-You can find the output at `dist/klee.min.js` relative to the root of the project directory.
+您可以在相对于项目目录根的`dist/klee.min.js`中找到输出。
 
-## Development setup
+## 开发设置
 
 ```bash
 npm install
 npm run dev
 ```
-

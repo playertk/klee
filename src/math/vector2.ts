@@ -1,36 +1,34 @@
 export class Vector2 {
-    x: number;
-    y: number;
+  x: number
+  y: number
 
-    constructor(x: number, y: number) {
-        this.x = x;
-        this.y = y;
-    }
+  constructor(x: number, y: number) {
+    this.x = x
+    this.y = y
+  }
 
-    add(vec: Vector2) {
-        return new Vector2(this.x + vec.x, this.y + vec.y);
-    }
+  add(vec: Vector2) {
+    return new Vector2(this.x + vec.x, this.y + vec.y)
+  }
 
-    subtract(vec: Vector2) {
-        return new Vector2(this.x - vec.x, this.y - vec.y);
-    }
+  subtract(vec: Vector2) {
+    return new Vector2(this.x - vec.x, this.y - vec.y)
+  }
 
-    divide(vec: Vector2) {
-        return new Vector2(this.x / vec.x, this.y / vec.y);
-    }
+  divide(vec: Vector2) {
+    return new Vector2(this.x / vec.x, this.y / vec.y)
+  }
 
-    multiply(vec: Vector2 | number) {
-        if (vec instanceof Vector2)
-            return new Vector2(this.x * vec.x, this.y * vec.y);
-        else
-            return new Vector2(this.x * vec, this.y * vec);
-    }
+  multiply(vec: Vector2 | number) {
+    if (vec instanceof Vector2) return new Vector2(this.x * vec.x, this.y * vec.y)
+    else return new Vector2(this.x * vec, this.y * vec)
+  }
 
-    toString(): string {
-        return `Vector2(x: ${this.x}, y: ${this.y})`;
-    }
+  toString(): string {
+    return `Vector2(x: ${this.x}, y: ${this.y})`
+  }
 
-    copy(): Vector2 {
-        return new Vector2(this.x, this.y);
-    }
+  copy(): Vector2 {
+    return new Vector2(this.x, this.y)
+  }
 }

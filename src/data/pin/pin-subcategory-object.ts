@@ -1,4 +1,4 @@
 export interface PinSubCategoryObject {
-    type: string,
-    class: string,
+  type: string
+  class: string
 }

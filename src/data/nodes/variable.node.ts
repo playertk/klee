@@ -1,12 +1,12 @@
-import { NodeDataReference } from "../node-data-reference";
-import { Node } from "./node";
+import { NodeDataReference } from '../node-data-reference'
+import { Node } from './node'
 
 export enum VariableType {
-    Getter,
-    Setter
+  Getter,
+  Setter,
 }
 
 export interface VariableNode extends Node {
-    variableType: VariableType,
-    variableReference: NodeDataReference;
+  variableType: VariableType
+  variableReference: NodeDataReference
 }

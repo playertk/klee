@@ -1,6 +1,6 @@
-import { Node } from "./node";
+import { Node } from './node'
 
 export interface SwitchEnumNode extends Node {
-    enum: string,
-    enumEntries: string[]
+  enum: string
+  enumEntries: string[]
 }

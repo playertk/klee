@@ -1,5 +1,4 @@
-
 export enum PinDirection {
-    EGPD_Input,
-    EGPD_Output
+  EGPD_Input,
+  EGPD_Output,
 }

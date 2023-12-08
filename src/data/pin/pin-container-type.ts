@@ -1,6 +1,6 @@
-export enum PinContainerType { 
-    None = "None",
-    Array = "Array",
-    Set = "Set",
-    Map = "Map"
+export enum PinContainerType {
+  None = 'None',
+  Array = 'Array',
+  Set = 'Set',
+  Map = 'Map',
 }

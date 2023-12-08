@@ -1,5 +1,5 @@
-import { CallFunctionNode } from "./call-function.node";
+import { CallFunctionNode } from './call-function.node'
 
 export interface MathFunctionNode extends CallFunctionNode {
-    isPrimitiveNode: boolean;
+  isPrimitiveNode: boolean
 }

@@ -1,7 +1,6 @@
-
 export enum ReplicationType {
-    NotReplicated,
-    Multicast,
-    RunOnServer,
-    RunOnOwningClient
+  NotReplicated,
+  Multicast,
+  RunOnServer,
+  RunOnOwningClient,
 }

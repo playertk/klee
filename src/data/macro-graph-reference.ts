@@ -1,4 +1,3 @@
-
 export interface MacroGraphReference {
-    macroFuncName?: string;
+  macroFuncName?: string
 }
